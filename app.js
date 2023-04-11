@@ -1,6 +1,6 @@
-const timeZone = document.querySelector('.location-timezone');
-const country = document.querySelector('.location-country');
-const icon = document.querySelector('.location p');
+const city = document.querySelector('.location-timezone');
+const timeZone = document.querySelector('.location-country');
+const icon = document.querySelector('.location img');
 const temperature = document.querySelector('.degree-section .degree');
 const description = document.querySelector('.description');
 
@@ -21,8 +21,10 @@ window.addEventListener('load', () => {
                     })
                     .then(data => {
                          console.log(data);
-                         timeZone.textContent = data.location.name;
-                         country.textContent = data.location.country;
+                         console.log(data.current.condition.icon);
+                         city.textContent = data.location.name;
+                         timeZone.textContent = data.location.tz_id;;
+                         icon.src = data.current.condition.icon;
                          temperature.textContent = data.current.temp_c;
                          description.textContent = data.current.condition.text;
                     });
