@@ -1,5 +1,5 @@
-const city = document.querySelector('.location-timezone');
-const timeZone = document.querySelector('.location-country');
+const city = document.querySelector('.location-city');
+const timeZone = document.querySelector('.location-timezone');
 const icon = document.querySelector('.location img');
 const temperature = document.querySelector('.degree-section .degree');
 const description = document.querySelector('.description');
